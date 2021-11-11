@@ -6,7 +6,7 @@ class myViewModel : ViewModel() {
 
 
     private var _score = 0
-    val score: Int
+    val score
         get() = _score
 
     fun add1() {

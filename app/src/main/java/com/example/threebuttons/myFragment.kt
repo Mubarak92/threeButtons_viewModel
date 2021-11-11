@@ -24,22 +24,29 @@ class myFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        newScore()
 
         binding.add1.setOnClickListener {
             viewModel.add1()
-            binding.textView.text = viewModel.score.toString()
+
+            newScore()
+
         }
         binding.sub2.setOnClickListener {
             viewModel.sub2()
-            binding.textView.text = viewModel.score.toString()
+
+            newScore()
         }
         binding.add4.setOnClickListener {
             viewModel.add4()
-            binding.textView.text = viewModel.score.toString()
 
 
+            newScore()
         }
 
+
+    }
+    fun newScore (){
+        binding.textView.text = viewModel.score.toString()
     }
 }
